@@ -1,0 +1,26 @@
+/* this example tests selection sort */
+get_max(a,b):largest begin
+  if (a > b) begin
+    largest := a;
+  end else begin
+    largest := b;
+  end
+  return largest;
+end
+
+arr := [25,6,36,2,425,26,13];
+for (i := 0, i < arr.length(), i := i + 1) begin
+  for (j := i + 1, j < arr.length(), j := j + 1) begin
+    if ( max(arr[i], arr[j]) != arr[j] ) begin
+      temp := arr[i];
+      arr[i] := arr[j];
+      arr[j] := temp;
+    end
+  end
+end
+
+display "[ ";
+for (i := 0, i < arr.length(), i := i + 1) begin
+  display arr[i], ", ";
+end
+display " ]\n";

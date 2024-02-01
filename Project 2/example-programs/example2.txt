@@ -1,0 +1,29 @@
+/*
+1. define a function foo that has two parameters p and q, 
+   and displays its name, the names and the values of the parameters, then
+   it returns the largest of the parameters.
+2. for each value of a in the list of {5, 0, 3, -7} // assuming your data structure has such a syntax
+2.1.   for each value of b in the list of {9, -2, -1}
+2.1.1.    c gets foo(a, b)
+2.1.2     display the values of a, b and c
+*/
+
+foo(p,q) : largest begin
+  display "my name is foo and my parameters are\n";
+  display "p = ", p, ", q =", q, "\n";
+  if (p>q) begin
+    largest := p;
+  end else begin
+    largest := q;
+  end
+  return largest;
+end
+
+a := [5,0,3,-7];
+b := [9,-2,-1];
+for (i := 0, i < a.length(), i := i + 1) begin
+  for (j := 0, j < b.length(), j := j + 1) begin
+    c := foo(a[i],b[j]);
+    display "c = ", c, ", a = ", a[i], ", b = ", b[j];
+  end
+end

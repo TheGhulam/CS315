@@ -1,0 +1,21 @@
+
+get(a):d begin
+
+  d := input "calculating d";  /* inline*/
+  display "value of d: ", d; 
+  return d; /* inline */
+end
+
+b := a + 2 + get(5) * 10; /* inline */
+a := input "enter a value for a: ";
+arr := [12,13,14];
+b := arr.size();
+c := arr[2];
+while (a > 12) begin
+  a := a - 1;
+end else begin
+  display "a was greater than 12";
+end
+for (i := 1, i < 10, i := i + 1) begin
+  display "test";
+end

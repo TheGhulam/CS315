@@ -1,0 +1,40 @@
+function booleanDemo() {
+    // Boolean operators
+    console.log("Boolean Operators:");
+    console.log("true && false:", true && false); // AND
+    console.log("true || false:", true || false); // OR
+    console.log("!true:", !true); // NOT
+
+    // Data types and Boolean values
+    // JavaScript is dynamically typed, and this part shows how different types (numbers, strings) behave in boolean contexts.
+    console.log("\nData Types and Boolean Values:");
+    console.log("1 (Truthy) && 0 (Falsy):", 1 && 0); // Non-zero numbers are truthy, 0 is falsy
+    console.log("'string' (Truthy) || '' (Falsy):", 'string' || ''); // Non-empty strings are truthy, empty string is falsy
+
+    // Operator precedence
+    // Shows how && has higher precedence than ||.
+    console.log("\nOperator Precedence:");
+    console.log("false || true && false:", false || true && false); // Equivalent to false || (true && false)
+
+    // Associativity
+    // Shows that both && and || are left-associative.
+    console.log("\nAssociativity:");
+    console.log("true && false || true && true:", true && false || true && true); // Equivalent to ((true && false) || true) && true
+
+    // Evaluation order
+    // Shows the left-to-right evaluation, with the sideEffect() function not being called due to short-circuiting in logical expressions.
+    console.log("\nEvaluation Order:");
+    console.log("false && sideEffect() || true:", false && sideEffect() || true); // sideEffect is not called due to short-circuit
+
+    // Short-circuit evaluation
+    // Shows how JavaScript doesn't evaluate the second operand of && or || if the first operand is sufficient to determine the result.
+    console.log("\nShort-Circuit Evaluation:");
+    console.log("true || sideEffect() && false:", true || sideEffect() && false); // sideEffect is not called due to short-circuit
+}
+
+function sideEffect() {
+    console.log("Side effect function called");
+    return true;
+}
+
+booleanDemo();

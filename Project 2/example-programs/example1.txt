@@ -1,0 +1,33 @@
+/*
+1. prompt the user to enter the values of x, y z 
+2. read the value of x, y and z from the keyboard
+3. if any of them is zero, ask the user to enter only non-zero values
+4. keep reading new values until proper values are entered.
+5. display the value of the expression (x times y times z)
+*/
+
+x := input "enter value for x: ";
+while (x == 0) begin
+  display "please enter a non-zero value for x";
+  x := input "enter value for x again: ";
+end else begin
+  display "value of x was correct in inital input";
+end
+
+y := input "enter value for y: ";
+while (y == 0) begin
+  display "please enter a non-zero value for y";
+  y := input "enter value for y again: ";
+end else begin
+  display "value of y was correct in inital input";
+end
+
+z := input "enter value for z: ";
+while (z == 0) begin
+  display "please enter a non-zero value for z";
+  z := input "enter value for z again: ";
+end else begin
+  display "value of z was correct in inital input";
+end
+
+display x, " times ", y, " times ", z;

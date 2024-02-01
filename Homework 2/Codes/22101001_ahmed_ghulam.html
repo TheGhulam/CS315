@@ -1,0 +1,50 @@
+function main() {
+    // Demonstrating basic closure
+    let message = "Greetings";
+    let simpleClosure = () => console.log(message);
+    simpleClosure(); // Output: Greetings
+
+    // Demonstrating closure with mutability
+    let counter = 10;
+    let incrementClosure = () => {
+        counter += 5;
+        console.log('Counter:', counter);
+    };
+    incrementClosure(); // Output: Counter: 15
+    incrementClosure(); // Output: Counter: 20
+
+    // Demonstrating closure that returns a function
+    let adderClosure = createAdder(7);
+    console.log(adderClosure(4)); // Output: 11
+
+    // Demonstrating nested closures
+    let nestedClosure = createMultiplier(3);
+    console.log(nestedClosure(4)); // Output: 12
+
+    // Demonstrating closure capturing multiple variables
+    let complexClosure = createComplexClosure("Complex", "Closure");
+    complexClosure(); // Output:  Complex Closure
+}
+
+// Function that returns a closure adding a specific number
+function createAdder(addBy) {
+    return function (number) {
+        return number + addBy;
+    };
+}
+
+// Function that returns a nested closure
+function createMultiplier(multiplyBy) {
+    return function (number) {
+        return number * multiplyBy;
+    };
+}
+
+// Function that creates a closure capturing multiple variables
+function createComplexClosure(part1, part2) {
+    return function () {
+        console.log(part1, part2);
+    };
+}
+
+main();
