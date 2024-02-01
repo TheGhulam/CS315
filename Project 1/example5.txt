@@ -1,0 +1,19 @@
+get(a):d begin
+  d := input "calculating d" 
+  display "value of d: " d 
+  return d /* return d */
+end
+
+b := a + 2 + get(5) * 10
+a := input "enter a value for a: "
+arr := [12,13,14]
+b := arr.size()
+c := arr[2]
+while (a > 12) begin
+  a := a - 1
+end else begin
+  display "a was greater than 12"
+end
+for (i := 1, i < 10, i := i + 1) begin
+  display "test"
+end
